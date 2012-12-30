@@ -58,3 +58,23 @@ h3 {
   letter-spacing: -1px;
   color: #999;
 }
+
+/* Display navigation links inline */
+
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu li + li {
+  margin-left: 35px;
+}
+
+.menu li a {
+  color: #999;
+  text-decoration: none;
+}
