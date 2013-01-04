@@ -3,7 +3,19 @@
 {% block content %}
   <h2>Contact</h2>
   
-  {% for message in get_flashed_messages() %}
+  {% for message in form.name.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.email.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.subject.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.message.errors %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
   
