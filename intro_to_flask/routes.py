@@ -38,6 +38,9 @@ def contact():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
   form = SignupForm()
+
+  if 'email' in session:
+    return redirect(url_for('profile')) 
   
   if request.method == 'POST':
     if form.validate() == False:
@@ -69,7 +72,10 @@ def profile():
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
   form = SigninForm()
-  
+
+  if 'email' in session:
+    return redirect(url_for('profile')) 
+      
   if request.method == 'POST':
     if form.validate() == False:
       return render_template('signin.html', form=form)
