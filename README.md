@@ -33,9 +33,9 @@ First clone this repo by running
 $ git clone git://github.com/cuttarug/intro-to-flask.git
 ```
 
-Then fetch each checkpoint to see what the code looks like at that point by running `$ git checkout -b [<checkpoint-name>]`. For example, to view the code at checkpoint "05\_contact\_form", type
+Then fetch each checkpoint to see what the code looks like at that point by running `$ git checkout [<checkpoint-name>]`. For example, to view the code at checkpoint "05\_contact\_form", type
 ```bash
-$ git checkout origin/05_contact_form
+$ git checkout 05_contact_form
 ```
 
 ## Using the GitHub branch menu
