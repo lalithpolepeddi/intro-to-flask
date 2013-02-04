@@ -2,6 +2,7 @@ from intro_to_flask import app
 from flask import render_template, request, flash
 from forms import ContactForm
 from flask.ext.mail import Message, Mail
+from models import db
 
 mail = Mail()
 
@@ -32,4 +33,4 @@ def contact():
       return render_template('contact.html', success=True)
 
   elif request.method == 'GET':
-    return render_template('contact.html', form=form)
+    return render_template('contact.html', form=form)  
